@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			
+			document.write("<p style='text-align:center'>Приклад знаходження найменшого числа або рівності</p>");
+			
+			
+			let x = 12; 
+			let y = 25; 
+			let z = 12;
+			
+			
+			if (x === y && y === z) {
+				document.write("Всі числа рівні: x = y = z = ", x);
+			} else if (x === y && x < z) {
+				document.write("x і y рівні і є найменшими: x = y = ", x);
+			} else if (x === z && x < y) {
+				document.write("x і z рівні і є найменшими: x = z = ", x);
+			} else if (y === z && y < x) {
+				document.write("y і z рівні і є найменшими: y = z = ", y);
+			} else if (x < y && x < z) {
+				document.write("Найменше серед трьох чисел - x = ", x);
+			} else if (y < z) {
+				document.write("Найменше серед трьох чисел - y = ", y);
+			} else {
+				document.write("Найменше серед трьох чисел - z = ", z);
+			}
+			
+			
+			let min = (x < y ? x : y); 
+			min = (min < z ? min : z);
+			document.write("<p>Значення найменшого серед трьох чисел - ", min, "</p>");
+		</script>
+	</body>
+</html>
